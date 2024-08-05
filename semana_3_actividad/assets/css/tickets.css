@@ -1,0 +1,63 @@
+* {
+  background-color: #fffff9;
+  font-family: "inherit";
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "inherit";
+}
+
+body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 16px 35px 16px;
+}
+/* 
+.containerTicket {
+  padding: 1rem 2rem;
+  min-width: 400px;
+  user-select: none;
+}
+
+.containerData {
+  padding: 1rem 2rem;
+  min-width: 400px;
+  user-select: none; 
+}*/
+
+.card-body p {
+  font-size: xx-small;
+  text-align: justify;
+  font-family: inherit;
+}
+
+.nameLocation {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#ticketform {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  row-gap: 1em;
+  text-align: center;
+}
+
+.card-body button {
+  margin-left: 25%;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  row-gap: 1em;
+}

@@ -1,0 +1,67 @@
+* {
+  font-family: "inherit";
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.accesibility {
+  margin: 20px;
+}
+
+a:hover {
+  color: #2c3e50;
+  text-shadow: whitesmoke;
+}
+
+footer > href {
+  text-decoration: none;
+}
+[href] {
+  color: black;
+}
+
+form > button {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.d-block {
+  width: 1000px;
+  height: 600px;
+}
+
+.img1 {
+  display: flex;
+  background-size: cover;
+}
+
+.introduction {
+  margin: 20px;
+}
+
+input {
+  border: solid black;
+  border-radius: 6px;
+}
+
+.orquestas {
+  margin: 20px;
+  padding-top: 15px;
+}
+
+p {
+  text-align: justify;
+}
+
+.sinfonica {
+  background-color: #f7f7f7;
+  padding: 40px 0px 15px 65px;
+}
+
+ul {
+  list-style: none;
+}
+
+.video {
+  padding-left: 12%;
+}
