@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>220531770_03 Semana 3</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
+  </head>
+  <body>
+    <title>Get your tickets</title>
+    <header></header>
+    <section class="pt-4">
+      <div class="container d-flex justify-content-around">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="./assets/img/localidadPreferente.jpg"
+                alt="Imagen Palau de la Musica Catalana"
+                id="card-image"
+              />
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h4 id="card-title" class="card-title">
+                        Localidad Preferencial
+                      </h4>
+                      <h4 id="card-price">2€</h4>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <p id="card-desc" class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Illum, quaerat error? Ipsum quisquam voluptatibus ipsam,
+                  inventore odit accusamus nostrum maiores quae deleniti, quidem
+                  reiciendis? Doloremque illo nihil totam quasi voluptas!.
+                </p>
+                <!-- <a href="#" class="btn btn-success">Buy Now</a>
+                <a href="#" class="btn btn btn-outline-success">Cancel</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="display-6">Selecciona tus opciones</h3>
+            <select
+              id="product-img"
+              class="form-select mb-3 mt-2 image-picker show-html"
+              aria-label="Default select example"
+              onChange="getSelectedImage(this);"
+            >
+              <option value="Default">Selecciona localidad</option>
+              <option
+                data-img-src="assets/img/localidadPreferente.jpg"
+                data-img-class="first"
+                data-img-alt="Page 1"
+                value="1"
+              >
+                Preferencial
+              </option>
+              <option
+                data-img-src="assets/img/localidadPreferente.jpg"
+                data-img-alt="Page 2"
+                value="2"
+              >
+                Accesibilidad
+              </option>
+              <option
+                data-img-src=""
+                data-img-alt="Page 3"
+                data-img-class="last"
+                value="3"
+              >
+                Record Player
+              </option>
+            </select>
+            <form id="product-form">
+              <div class="form-group">
+                <label for="product">Nobre</label>
+                <input
+                  id="product-input"
+                  type="text"
+                  class="form-control mb-3 mt-2"
+                  id="product"
+                  placeholder="Nombre completo"
+                />
+              </div>
+              <!--  <div class="form-group">
+                <label for="precio">Precio</label>
+                <div class="input-group mb-3 mt-2">
+                  <span class="input-group-text">$</span>
+                  <input
+                    id="precio-input"
+                    type="number"
+                    class="form-control"
+                    id="precio"
+                    aria-label="Amount (to the nearest dollar)"
+                    placeholder="Ingresar Precio"
+                  />
+                  <span class="input-group-text">.00</span>
+                </div>
+              </div> -->
+              <!--    <div class="form-group">
+                <label for="description">Descripción</label>
+                <textarea
+                  id="description-input"
+                  class="form-control mb-3 mt-2"
+                  aria-label="Descripción"
+                  placeholder="Ingresar Descripción"
+                ></textarea>
+              </div> -->
+              <button
+                id="create-tweet-button"
+                type="submit"
+                class="btn btn-primary w-100"
+              >
+                Comprar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./assets/js/ticketsTwo.js"></script>
+    <!-- <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/image-picker.js"></scrip -->t>
+    <script type="text/javascript">
+      jQuery("select.image-picker").imagepicker({
+        hide_select: false,
+      });
+
+      function getSelectedImage(sel) {
+        const elem = document.getElementById("card-image");
+        if (sel.options[sel.selectedIndex].value == "1") {
+          elem.src = "assets/img/computer-g3ced3ba95_640.jpg";
+        } else if (sel.options[sel.selectedIndex].value == "2") {
+          elem.src = "assets/img/shoes-g512cfdef2_640.jpg";
+        } else if (sel.options[sel.selectedIndex].value == "3") {
+          elem.src = "assets/img/vinyl-record-g9e6a0306d_640.jpg";
+        }
+      }
+    </script>
+  </body>
+</html>

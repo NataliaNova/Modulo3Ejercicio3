@@ -19,23 +19,33 @@ h1 {
   text-align: center;
   margin: 20px 16px 35px 16px;
 }
-/* 
-.containerTicket {
-  padding: 1rem 2rem;
-  min-width: 400px;
-  user-select: none;
-}
 
-.containerData {
+/* .containerTicket {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  row-gap: 1em;
+  text-align: center;
+} */
+
+/* .containerData {
   padding: 1rem 2rem;
   min-width: 400px;
   user-select: none; 
 }*/
 
 .card-body p {
-  font-size: xx-small;
+  font-size: small;
   text-align: justify;
   font-family: inherit;
+  color: #2c3639;
+}
+
+.cardImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .nameLocation {
@@ -44,17 +54,32 @@ h1 {
   text-align: center;
 }
 
-#ticketform {
+/* #ticketform {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 10px;
   row-gap: 1em;
   text-align: center;
+} */
+
+.buttonDiv {
+  text-align: center;
 }
 
-.card-body button {
-  margin-left: 25%;
+.dataTicket {
+  padding: 1rem 2rem;
+  min-width: 400px;
+  user-select: none;
+  color: #181d31;
 }
+
+.ticketTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

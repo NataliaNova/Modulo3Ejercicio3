@@ -59,25 +59,30 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const location = document.getElementById("locationInput");
   const numberOfTickets = document.getElementById("numberOfTicketsInput");
+  const name = document.getElementById("nameInput");
+  const email = document.getElementById("emailInput");
   const ticketButton = document.getElementById("getTicket");
   const dataTicket = document.querySelector(".dataTicket");
   const allInputs = document.querySelectorAll("input");
 
-  /*   allInputs.forEach((input) => {
-      input.addEventListener("input", () => {
-        if (input.value === "") {
-          input.classList.add("is-invalid");
-        } else {
-          input.classList.remove("is-invalid");
-        }
-      });
-    }); */
+
+  allInputs.forEach((input) => {
+    input.addEventListener("input", () => {
+      if (input.value === "") {
+        input.classList.add("is-invalid");
+      } else {
+        input.classList.remove("is-invalid");
+      }
+    });
+  });
 
   ticketButton.addEventListener("click", (event) => {
     event.preventDefault();
 
     const location = locationInput.value;
     const numberOfTickets = numberOfTicketsInput.value;
+    const name = nameInput.value;
+    const email = emailInput.value;
 
     if (location === "") {
       locationInput.classList.add("is-invalid");
@@ -91,13 +96,24 @@ window.addEventListener("DOMContentLoaded", () => {
       numberOfTicketsInput.classList.remove("is-invalid");
     }
 
-    if (location !== "" && numberOfTickets !== "") {
-      dataTicket.innerHTML = `
-      <div class="Location">
-        <h4 id="selectLocation" class="nameLocation">Has seleccionado ${numberOfTickets}  boletas en la localidad ${location}</h4>`;
+    if (name === "") {
+      nameInput.classList.add("is-invalid");
+    } else {
+      nameInput.classList.remove("is-invalid");
+    }
+
+    if (email === "") {
+      emailInput.classList.add("is-invalid");
+    } else { emailInput.classList.remove("is-invalid"); }
+
+    if (location !== "" && numberOfTickets !== "" && name !== "" && email !== "") {
+      Swal.fire(dataTicket.innerHTML = `Felicidades  ${name}! Has seleccionado ${numberOfTickets}  boletas en la localidad ${location}</h4 >`);
+
 
       locationInput.value = "";
       numberOfTicketsInput.value = "";
+      nameInput.value = "";
+      emailInput.value = "";
 
       ticketButton.classList.add("btn-success");
 

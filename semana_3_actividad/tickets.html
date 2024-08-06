@@ -13,23 +13,23 @@
     <link rel="stylesheet" href="./assets/css/tickets.css" />
   </head>
   <body>
-    <img src="./assets/img/barcelona-obertura.svg" alt="" />
+    <img src="./assets/img/barcelona-obertura.svg" alt="Imagen Sinfonica" />
     <h1 class="display-6">Obten tus entradas</h1>
 <section class="">
-    <div class="container d-flex justify-content-around">
-      <div class=" row containerTicket">
-        <div class="card" style="width: 18rem; border: none">
-          <h5 class="card-title" style="text-align: center">
+   <h5 class="ticketTitle" style="text-align: center">
             Orquesta Sinfónica de Barcelona y Nacional de Catalunya
           </h5>
+    <div class="container d-flex justify-content-around">      
+      <div class=" row containerTicket">
+        <div class="card col-6 align-self-start" style="border: none">         
           <img
             src="./assets/img/TicketOne.jpg"
-            class="card-img-top"
+            class="cardImg"
             alt="Imagen de director Sinfónica"
           />
           <div class="card-body">
              <p>La localidad preferencial es para personas con requerimientos de accesibilidad o grupos hasta de 5 personas con niños en cohecito. La localidad general es para quienes no cumplan estas condiciones</p>
-            <form id="ticketform">
+            <!-- <form id="ticketform">
              <div class="mb-3">
   <label for="location" class="form-label">Localidad</label>
   <input type="text" class="form-control" id="locationInput" placeholder="Preferencial o General">
@@ -39,7 +39,7 @@
   <input type="number" class="form-control" id="numberOfTicketsInput" placeholder="Número de boletas">
 </div>
 </div>            </form>
-            <button id="getTicket" type="submit" class="btn btn-primary w-80" >Seleccionar</button>
+            <button id="getTicket" type="submit" class="btn btn-primary w-80" >Seleccionar</button> -->
             
               <!-- <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Acción</a></li>
@@ -48,51 +48,45 @@
                 <li><hr class="dropdown-divider" /></li> 
               </ul>-->
               
-      </div> 
-    
+      </div>     
      </div>
     <div class="containerData col-6">
-           <div class="ms-4 box-blue">
-        <form id="tweet-form" class="box-blue">
-          <h3>Datos</h3>
-          <div class="form-group box-blue">
-            <label for="description" class="box-blue">Nombre</label>
-            <input
-              id="description-input"
-              type="text"
-              class="box-blue form-control mb-3 mt-2"
-              aria-describedby="emailHelp"
-              placeholder="Enter description"
-            />
-          </div>
-          <div class="form-group box-blue">
-            <label for="description" class="box-blue">Email</label>
-            <input
-              id="description-input"
-              type="text"
-              class="box-blue form-control mb-3 mt-2"
-              aria-describedby="emailHelp"
-              placeholder="Enter description"
-            />
-          </div>
-          <button
-            id="create-tweet-button"
-            type="submit"
-            class="box-blue btn btn-primary w-100"
-          >
-            Previsualizar
-          </button>
-        </form>
-        <br>
-        <div class="dataTicket me-4"> aca se verá lo seleccionado BORRAR</div>
+           <div class="">
+            <form id="ticketform">
+             <div class="mb-3">
+  <label for="location" class="form-label">Escribe la localidad</label>
+  <input type="text" class="form-control" id="locationInput" placeholder="Preferencial o General" required>
+</div> 
+<div class="mb-3">
+  <label for="numberOfTickets" class="form-label"> Selecciona el número de boletas</label>
+  <input type="number" class="form-control" id="numberOfTicketsInput" placeholder="Número de boletas" required>
+</div>
+<div class="mb-3">
+  <label for="name" class="form-label"> Escribe tu nombre</label>
+  <input type="text" class="form-control" id="nameInput" placeholder="Nombre completo" required>
+</div>
+<div class="mb-3">
+  <label for="email" class="form-label"> Escribe tu email</label>
+  <input type="email" class="form-control" id="emailInput" placeholder="Correo electronico" required>
+</div>
+</div>
+            </form>        
+            
       </div>
-    </div>
-    </div>
+    </div>    
+    </div>    
+    <div class="buttonDiv">
+        <button id="getTicket" type="submit" class="btn btn-primary w-80" >Seleccionar</button>
+        <br>
+        <br>
+       </div>
+       <!-- <div class="dataTicket"> aca se verá lo seleccionado BORRAR Alerta</div> -->
     </section>
 
     <script src="./assets/js/tickets.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
